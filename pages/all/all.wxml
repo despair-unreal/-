@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view catchtap="select" class="select">
+  <view>
+    <block wx:for="{{type}}">
+      <view-item class='{{selectTypeItem== index ? "active" : ""}}' bindtap="type" data-index="{{index}}">{{index}}</view-item>
+    </block>
+  </view>
+  <view wx:if="{{show}}">
+    <block wx:for="{{lang}}">
+      <view-item class='{{selectLangItem== index ? "active" : ""}}' bindtap="lang" data-index="{{index}}">{{index}}</view-item>
+    </block>
+  </view>
+  <view wx:if="{{show}}">
+    <block wx:for="{{year}}">
+      <view-item class='{{selectYearItem== index ? "active" : ""}}' bindtap="year" data-index="{{index}}">{{item}}</view-item>
+    </block>
+  </view>
+  <view wx:if="{{show}}">
+    <block wx:for="{{month}}">
+      <view-item class='{{selectMonthItem== index ? "active" : ""}}' bindtap="month" data-index="{{index}}">{{item}}</view-item>
+    </block>
+  </view>
+  <view catchtap="show" style="margin-bottom: 0px;display:inline-block;margin:0 auto">
+    <text wx:if="{{show}}">︿</text>
+    <text wx:if="{{!show}}" style="margin-top:5px">﹀</text>
+  </view>
+</view>
+<view style="height:{{show?'225':'87'}}px"></view>
+<import src="/pages/template/list.wxml" />
+<scroll-view class="content" scroll-y scroll-x="false">
+  <view wx:if="{{nothing}}">
+    暂无内容
+  </view>
+  <view wx:if="{{!nothing}}">
+    <view wx:for="{{Allitems}}">
+      <template is="List" data="{{...item,Allitems,index}}" />
+    </view>
+    <template is="loading" data="{{more}}"></template>
+  </view>
+</scroll-view>

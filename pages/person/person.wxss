@@ -1,0 +1,124 @@
+/* pages/person/person.wxss */
+page{
+  background-color: #F4F5F7;
+}
+.bg{
+  width: 100vw;
+  height: 200px;
+}
+.content{
+  width: 90%;
+  position: absolute;
+  top: 170px;
+  z-index: 9;
+  margin-left: 5%;
+}
+.msg{
+  width: 100%;
+  height: 200px;
+  position: relative;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.msg>view:first-child{
+  position: absolute;
+  top: -35px;
+  display: flex;
+  background-color: transparent;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #F1F1F1;
+  width: 100%;
+}
+.msg>view:first-child image{
+  width: 90px;
+  height: 90px;
+  margin-left: 35px;
+  border-radius: 50%;
+}
+.msg>view:first-child text{
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 52px;
+  margin-left: 20px;
+}
+.msg>view:first-child>text:nth-child(3){
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 65px;
+  margin-left: 40px;
+}
+.msg>view:nth-child(2){
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 91px);
+}
+.msg>view:nth-child(2)>view{
+  flex: 1;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0;
+  padding-bottom: 20px;
+}
+.msg>view:nth-child(2)>view image{
+  height: 40px;
+  width: 40px;
+}
+.msg>view:nth-child(2)>view text{
+  font-size: 15px;
+  font-weight: 300;
+}
+.like{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.like2{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.pv scroll-view{
+  height: 210px;
+}
+.pv .forlike{
+  display: flex;
+}
+.pv .forlike view{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 15px;
+}
+.pv .title{
+  color: #000;
+  font-size: 15px;
+  margin-top: 7px;
+  font-weight: 300;
+}
+.pv .titleSelect{
+  color: #FB94B0;
+  font-size: 15px;
+  margin-top: 5px;
+  font-weight: 300;
+}
+.pv{
+  padding: 10px;
+  font-size: 18px;
+}
+.pv image{
+  margin-top: 15px;
+  width: 100px;
+  height: 140px;
+  border-radius: 8px;
+}
+.pv scroll-view{
+  white-space: nowrap;
+}

@@ -1,0 +1,52 @@
+<!--pages/index/index.wxml-->
+<view class="bg"></view>
+<view class="top" catchtap="toOther" data-index="4" >
+  <image src="{{userAvatar}}"></image>
+  <view>
+    <image src="/imgs/搜索.png"></image>
+    <input/>
+  </view>
+</view>
+<view class="swiper">
+  <swiper indicator-dots autoplay circular indicator-active-color="orange">
+    <swiper-item wx:for="{{swiper}}">
+      <image src="{{item.url}}"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="icon">
+  <view class="item" wx:for="{{icon}}" catchtap="toOther" data-index="{{item.index}}">
+    <view style="background-color:{{item.bgColor}}">
+      <image src="{{item.img}}"></image>
+    </view>
+    <text>{{index}}</text>
+  </view>
+</view>
+<view class="block">
+  <text>热门榜单</text>
+  <swiper next-margin="80px">
+    <swiper-item wx:for="{{hot}}">
+      <view>
+        <text>{{index}}</text>
+        <view wx:for="{{item}}" catchtap="toDetail" data-id="{{item.id}}">
+          <image src="{{item.img}}"></image>
+          <view>
+            <view>
+              <text>{{item.title}}</text>
+              <image src="{{hot_icon[index]}}"></image>
+            </view>
+            <text>{{item.num}}万 综合评分</text>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="block" wx:for="{{block}}">
+  <text>{{index}}</text>
+  <view wx:for="{{item}}">
+    <image src="{{item.img}}" bindload="Imgload" catchtap="toDetail" data-id="{{item.id}}"></image>
+    <text>{{item.title}}</text>
+  </view>
+</view>
+

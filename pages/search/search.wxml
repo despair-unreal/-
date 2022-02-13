@@ -1,0 +1,19 @@
+<!--pages/search/search.wxml-->
+<import src="/pages/template/list.wxml" />
+<view class="top">
+  <view>
+    <image src="/imgs/搜索.png"></image>
+    <input bindinput="search"/>
+  </view>
+</view>
+<scroll-view class="content" scroll-y scroll-x="false">
+  <view wx:if="{{nothing}}">
+    暂无内容
+  </view>
+  <view wx:if="{{!nothing}}">
+    <view wx:for="{{Allitems}}">
+      <template is="List" data="{{...item,Allitems,index}}" />
+    </view>
+    <template is="loading" data="{{more}}"></template>
+  </view>
+</scroll-view>

@@ -1,0 +1,26 @@
+<!--pages/column/column.wxml-->
+<view class="select">
+  <text wx:for="{{item}}" class='{{select==item ? "active" : ""}}' catchtap="select" data-item="{{item}}" data-index="{{index}}">{{item}}</text>
+</view>
+<swiper circular current="{{current}}" bindchange="current">
+  <swiper-item wx:for="{{content}}">
+    <scroll-view scroll-y>
+      <view class="item" wx:for="{{item}}" catchtap="toDetail" data-index="{{index}}">
+        <view>
+          <image src="{{item.userImg}}"></image>
+          <text>{{item.userName}}</text>
+        </view>
+        <text class="title">{{item.title}}</text>
+        <image mode="widthFix" bindload="Imgload" src="{{item.coverImg}}"></image>
+        <text class="content">{{item.content}}</text>
+        <view class="bottom">
+          <text>动漫杂谈 · {{item.read}}阅读</text>
+          <view>
+            <image src="/imgs/评论.png"></image><text>{{item.comment}}</text>
+            <image src="/imgs/邀请.png"></image><text>{{item.like}}</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>

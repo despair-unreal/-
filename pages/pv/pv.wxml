@@ -1,0 +1,25 @@
+<!--pages/pv/pv.wxml-->
+<video class="video" id="video" src="{{videoUrl}}" danmu-btn enable-danmu bindtimeupdate="bindtimeupdate" danmu-list="{{danmulist[id]}}" bindplay="videoPlay" ></video>
+<view class="top">
+  <text>简介</text>
+  <text></text>
+  <view>
+    <input placeholder="点我发弹幕" bindinput="getValue" class="send" />
+    <button catchtap="send"  class="btn">发送</button>
+  </view>
+</view>
+<view class="content">
+  <scroll-view scroll-y>
+    <import src="/pages/template/list.wxml" />
+    <template is="List" data="{{...items}}" />
+    <view class="pv">
+      <text style="display:block">PV</text>
+      <scroll-view scroll-x>
+        <view wx:for="{{pv}}" catchtap="videoChange" data-index="{{index}}">
+          <image src="{{item.cover}}"></image>
+          <text class="{{select==index?'titleSelect':'title'}}">{{item.title}}</text>
+        </view>
+      </scroll-view>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,5 @@
+<!--pages/site/site.wxml-->
+<view class="container">
+  <map id="map" markers="{{mark}}" class="map" longitude="{{longitude}}" latitude="{{latitude}}" bindmarkertap="markerTap"></map>
+</view>
+

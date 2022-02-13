@@ -1,0 +1,38 @@
+@import '/pages/template/list.wxss';
+
+.select{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  position: fixed;
+  background-color: #fff;
+  z-index: 999;
+  /*滚动*/
+  overflow-x:scroll;
+  left:0;
+  right:0;
+  font-weight: 300;
+}
+.select>view{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+  white-space: nowrap;
+}
+.select>view:nth-child(3),.select>view:nth-child(4){
+  overflow-x: scroll;
+}
+.select>view:nth-child(3)::-webkit-scrollbar,
+.select>view:nth-child(4)::-webkit-scrollbar{
+  display:none
+}
+.select view-item{
+  margin-right: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.active{
+  color: #FB7397;
+  background-color: #F4F4F4;
+  font-weight: bold;
+}

@@ -1,0 +1,35 @@
+<!--pages/modify/modify.wxml-->
+<form bindsubmit="formSubmit" report-submit="true">
+
+  <!-- 头像 -->
+  <view class="info">
+    <text class="fl">头像</text>    
+    <image class="avatar" src="{{imageUrl}}" mode="aspectFill" bindtap="changeAvatar"></image>
+    <image class="arrow" src="/imgs/arrow.png"></image>         
+  </view>
+  <view class="section">
+    <view class="section-title">昵称：</view>
+    <input type="text" name="username" value="{{username}}" placeholder="请输入昵称" />
+  </view>
+  <view class="info">
+    <text class="fl">背景图</text>    
+    <image class="bg" src="{{bgUrl}}" mode="aspectFill" bindload="Imgload" bindtap="changeBg"></image>
+    <image class="arrow" src="/imgs/arrow.png"></image>         
+  </view>
+  <view class="section">
+    <view class="section-title">性别：</view>
+
+    <radio-group name="gender">
+      <label>
+        <radio value="男" checked="{{gender===1 ? 'checked' : ''}}" />男
+      </label>
+      <label>
+        <radio value="女" checked="{{gender===2 ? 'checked' : ''}}" />女
+      </label>
+      <label>
+        <radio value="秀吉" checked="{{gender===1 ?  '': gender===2 ? '' : 'checked'}}" />秀吉
+      </label>
+    </radio-group>
+  </view>
+  <button formType="submit">保存</button>
+</form>

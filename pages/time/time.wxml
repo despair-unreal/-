@@ -1,0 +1,25 @@
+<!--pages/time/time.wxml-->
+<view class="weekly">
+  <view wx:for="{{weekly}}">
+    <text>{{item}}</text>
+    <text catchtap="select" data-index="{{index}}" class='{{select== index ? "active" : ""}}'>{{index}}</text>
+  </view>
+</view>
+<swiper circular current="{{current}}" bindchange="current">
+  <swiper-item wx:for="{{arr}}">
+    <scroll-view scroll-y scroll-x="false">
+      <view catchtap="toDetail" data-id="{{item.id}}" class="calendar" wx:for="{{item.items}}">
+        <view class="rating">
+          <text>评分:{{item.rating==null?'':item.rating.score}}</text>
+          <text>{{item.rating==null?none:item.rating.total+'人评分'}}</text>
+        </view>
+        <image bindload="Imgload" src="{{item.images.large}}"></image>
+        <view class="msg">
+          <text>{{item.name_cn==''?item.name==''?none:item.name:item.name_cn}}</text>
+          <text>{{item.name==''?item.name_cn==''?none:item.name_cn:item.name}}</text>
+          <text>追番人数：{{item.collection.doing}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>

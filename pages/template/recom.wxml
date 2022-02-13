@@ -1,0 +1,31 @@
+<template name="recom">
+      <view class="item">
+        <image bindload="Imgload" src="{{cover}}" data-id="{{id}}" data-index="{{index}}" catchtap="toDetail"></image>
+        <view class="title">
+            <view class="wrap"></view>
+            <text>{{title}}</text>
+        </view>   
+        <view class="content">
+          <view>
+              <text>{{tag1}}</text>
+              <text>{{tag2}}</text>
+          </view>
+          <image catchtap="like" wx:if="{{Islike}}" data-id="{{id}}" data-index="{{index}}" src="/imgs/like2.png"></image>
+          <image catchtap="like" wx:if="{{!Islike}}" data-id="{{id}}" data-index="{{index}}" src="/imgs/like.gif"></image>
+        </view>
+        <view class="like">
+          <text>追番人数</text>
+          <text>|</text>
+          <text>{{like}}万</text>
+        </view>
+    </view>
+    <view class="rev">
+      <view class="userImg">
+        <image src="{{userImg}}"></image>
+      </view>
+      <view class="text">
+        <text>@{{userName}}</text>
+        <text>{{content}}</text>
+      </view>
+    </view>
+</template>

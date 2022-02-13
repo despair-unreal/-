@@ -1,0 +1,79 @@
+<template name="List">
+  <view class="list" catchtap="toDetail" data-id="{{id}}" data-type="{{type}}" data-lang="{{lang}}">
+    <image src="{{image}}" bindload="{{index==Allitems.length-1?'Imgload':''}}"></image>
+    <view class="message">
+      <view class="title">
+        <text>{{title_cn}}</text>
+        <text style="display:block">{{title}}</text>
+      </view>
+      <text style="font-weight: 300;font-size:14px" wx:if="{{type}}">  {{type}} <text wx:if="{{lang}}">| {{lang}}</text></text>
+      <text style="font-weight: 300;font-size:14px">
+        <text wx:if="{{eps}}">{{eps}}话</text>
+        <text wx:if="{{!eps}}">暂无信息</text>/ {{year}}年{{month}}月
+      </text>
+      <view class="rating">
+        <text>评分:{{score}}</text>
+        <text>({{total}}人评分)</text>
+      </view>
+      <view class="dr">
+        <text class="detail">>>详情</text>
+        <view wx:if="{{rank!=''}}" class="rank">
+          <text style="font-size:12px">Rank </text>
+          <text style="font-weight:600">{{rank}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
+<template name="loading">
+  <view class='bottom' catchtap="loadingmore"> 
+      <view wx:if="{{more}}" class="loading">
+            <text></text>
+            <text></text>
+            <text></text>
+            <text></text>
+            <text></text>
+      </view>
+      <text wx:if="{{more}}">点击加载更多</text>
+      <text wx:if="{{!more}}">暂无更多</text>
+  </view>
+</template>
+<template name="detail">
+  <view class="list">
+      <image src="{{images.large}}" bindload="Imgload"></image>
+      <view class="bg"></view>
+      <view class="bg2" style='background: url("{{images.large!=null?images.large:""}}") center no-repeat;background-size:100%;'></view>
+      <view class="message">
+        <view class="title">
+          <text style="color:#fff;">{{name_cn==''?name==''?none:name:name_cn}}</text>
+          <text style="color:#ebebeb;display:block">{{name}}</text>
+        </view>
+        <text wx:if="{{type!=null}}" style="font-weight: 300;font-size:14px">  {{type}} <text wx:if="{{lang}}"> | {{lang}}</text></text>
+        <text style="font-weight: 300;font-size:14px"><text wx:if="{{eps}}">{{eps[eps.length-1].status=='Air'?'已完结':'连载中'}}, 全{{eps_count}}话</text><text wx:if="{{!eps}}">暂无信息</text> / {{air_date}}
+        </text>
+        <view class="rating">
+          <text style="color:#fff;">评分:{{rating.score}}</text>
+          <text style="color:#ebebeb;">({{rating.total}}人评分)</text>
+        </view>
+        <view class="dr">
+          <view wx:if="{{rank==null}}"></view>
+          <view class="detail"><image catchtap="like" src="{{Islike?'/imgs/喜欢 (1).png':'/imgs/喜欢2.png'}}"></image></view>
+          <view wx:if="{{rank!=null}}" class="rank">
+            <text style="font-size:12px">Rank </text>
+            <text style="font-weight:600">{{rank}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+</template>
+
+<template name="pv">
+        <view class="pv">
+          <scroll-view scroll-x>
+            <view wx:for="{{pv}}" catchtap="toDetail">
+              <image src="{{item.cover}}"></image>
+              <text class="title">{{item.title}}</text>
+            </view>
+          </scroll-view>
+        </view>
+</template>

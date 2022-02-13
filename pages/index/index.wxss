@@ -1,0 +1,198 @@
+/* pages/index/index.wxss */
+.bg{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -99;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#482b6d+0,694895+3,e4d9f4+19,f8f3fe+28,f8f4fe+36,f9f8fb+37,f4f4f4+43,f7f7f7+100 */
+  background: #482b6d; /* Old browsers */
+  background: linear-gradient(to bottom,  #482b6d 0%,#694895 3%,#e4d9f4 19%,#f8f3fe 28%,#FFF 36%,#FFF 37%,#FFF 43%,#FFF 100%); /* FF3.6-15 */
+  background: linear-gradient(to bottom,  #482b6d 0%,#694895 3%,#e4d9f4 19%,#f8f3fe 28%,#FFF 36%,#FFF 37%,#FFF 43%,#FFF 100%);  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #482b6d 0%,#694895 3%,#e4d9f4 19%,#f8f3fe 28%,#FFF 36%,#FFF 37%,#FFF 43%,#FFF 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#482b6d', endColorstr='#f7f7f7',GradientType=0 ); /* IE6-9 */
+}
+.swiper{
+  border-radius: 5px;
+  height: 180px;
+  width: 95vw;
+  margin: 5px auto;
+  overflow: hidden;
+}
+.swiper swiper-item{
+  border-radius: 5px;
+  height: 100%;
+}
+swiper-item image{
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+}
+.icon{
+  width: 95vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: -12px;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #F1F1F1;
+}
+.icon .item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icon .item>view{
+  display: inline-block;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  position: relative;
+}
+.icon image{
+  width: 25px;
+  height: 25px;
+  margin: auto;
+  position:absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.icon text{
+  margin-top: 5px;
+}
+.top{
+  width: 95vw;
+  margin: 0px auto;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 50px;
+}
+.top>image{
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+.top>view{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.top>view image{
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  left: 10px;
+}
+.top>view input{
+  height: 30px;
+  width: 70vw;
+  padding-left: 40px;
+  background-color: #F3F3F3;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.block swiper{
+  border-radius: 10px;
+  height: 360px;
+  width: 100%;
+  margin-top: 15px;
+}
+.block swiper-item{
+  width: 100%;
+  padding-right: 15px;
+}
+.block swiper-item>view{
+  border-radius: 10px;
+  background-color: #F4F4F4;
+  padding: 5px 0;
+  padding-right: 15px;
+}
+.block swiper-item>view>text{
+  display: block;
+  margin-left: 15px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.block swiper-item>view>view{
+  display: flex;
+  margin: 20px 0;
+  margin-left: 15px;
+}
+.block swiper-item>view>view>image{
+  width: 210px;
+  height: 80px;
+}
+.block swiper-item>view>view>view>view>text{
+  font-size: 15px;
+  font-weight: 300;
+  width: 90px;
+}
+.block swiper-item>view>view>view{
+  width: 190px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.block swiper-item>view>view>view>text{
+  font-size: 14px;
+  font-weight: 300;
+  color: #C2C2C2;
+}
+.block swiper-item>view>view>view>view{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.block swiper-item>view>view>view>view>image{
+  padding-left: 5px;
+  width: 25px;
+  height: 25px;
+}
+.block{
+  width: 95vw;
+  margin: 0px auto;
+  border-bottom: 1px solid #F1F1F1;
+  overflow: hidden;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.block>text{
+  display: block;
+  font-weight: bold;
+}
+.block>view{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  float: left;
+  width: 31%;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  margin-right: 2.33%;
+}
+.block>view text{
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  font-weight: 300;
+  text-align: center;
+}
+.block>view image{
+  height: 140px;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}

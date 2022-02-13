@@ -1,0 +1,92 @@
+/* pages/pv/pv.wxss */
+page{
+  overflow: hidden;
+}
+video{
+  width: 100%;
+}
+.top{
+  height: 45px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 2px solid #F4F4F4;
+  margin-bottom: 25px;
+}
+.top>text:nth-child(1){
+  font-size: 19px;
+  font-weight: 500;
+  color: #FB94B0;
+  border-bottom: 4px solid #FB94B0;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  padding-right: 3px;
+  padding-left: 3px;
+}
+.top>view{
+  width: 50%;
+  white-space: nowrap;
+}
+.send{
+  border:2px solid #EDEDED;
+  border-radius: 20px;
+  width: 80%;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 30px;
+  background-color: #F3F3F3;
+  display: inline-block; 
+}
+.btn{
+  display: inline-block !important;
+  width: 21% !important;
+  border: 1px solid #EDEDED !important;
+  padding: 8px 5px !important;
+  background-color: #fff !important;
+  margin-left: -21% !important;
+  border-top-right-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+  font-size: 13px !important;
+  font-weight: 300 !important;
+}
+@import '/pages/template/list.wxss';
+.pv{
+  padding: 10px;
+  font-size: 18px;
+  height: 500px;
+}
+.pv image{
+  margin-top: 15px;
+  width: 150px;
+  height: 90px;
+  border-radius: 8px;
+  display: block;
+}
+.content{
+  height: 100vh;
+}
+.content>scroll-view{
+  height: 100%;
+}
+.pv scroll-view{
+  height: 30%;
+  white-space: nowrap;
+}
+.pv scroll-view view{
+  white-space: nowrap;
+  display: inline-block;
+  margin-right: 15px;
+}
+.pv .title{
+  color: #000;
+  font-size: 15px;
+  margin-top: 5px;
+  font-weight: 300;
+}
+.pv .titleSelect{
+  color: #FB94B0;
+  font-size: 15px;
+  margin-top: 5px;
+  font-weight: 300;
+}

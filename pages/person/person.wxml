@@ -1,0 +1,55 @@
+<!--pages/person/person.wxml-->
+<image class="bg" src="{{bgUrl}}"></image>
+<view class="content">
+  <view class="msg">
+    <view>
+      <image src="{{userAvatar}}"></image>
+      <text>{{userName}}</text>
+      <text>性别：{{gender}}</text>
+    </view>
+    <view>
+      <view catchtap="site">
+        <image src="/imgs/位置.png"></image>
+        <text>点击获取地址:</text><text>{{site}}</text>
+      </view>
+      <view catchtap="update">
+        <image src="/imgs/修改资料.png"></image>
+        <text>修改资料</text>
+      </view>
+    </view>
+  </view>
+  <view class="like">
+    <view class="pv">
+      <text style="display:block">我的追番</text>
+      <text wx:if="{{like.length==0}}" style="margin-top:5px;margin-left:20px;font-size:15px">无</text>
+      <scroll-view scroll-x wx:if="{{like.length!=0}}">
+        <view class="forlike">
+          <view wx:for="{{like}}" catchtap="toDetail" data-id="{{item.id}}">
+            <image src="{{item.img}}" bindload="Imgload"></image>
+            <text class="title">{{item.title}}</text>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="like2">
+    <view class="pv">
+      <text style="display:block">消息</text>
+    </view>
+  </view>
+  <view class="like2">
+    <view class="pv">
+      <text style="display:block">公告</text>
+    </view>
+  </view>
+  <view class="like2">
+    <view class="pv">
+      <text style="display:block">反馈留言</text>
+    </view>
+  </view> 
+  <view class="like2">
+    <view class="pv">
+      <text style="display:block">关注微博</text>
+    </view>
+  </view>
+</view>

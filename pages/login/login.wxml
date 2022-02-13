@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="container">
+    <text wx:if="{{hasUserInfo}}" class="text">Hello，{{userInfo.nickName}}</text>
+    <button wx:if="{{hasUserInfo}}" bindtap="navigateTo">进入首页</button>
+    <text wx:else class="text2">Hello，World</text>
+    <button wx:if="{{!hasUserInfo}}" open-type="getUserProfile" bindtap="getUserProfile">授权登录</button>
+</view>

@@ -1,0 +1,33 @@
+page{
+  background-image: url('http://localhost:3000/imgs/login_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+}
+.container{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+button{
+  background-color: #4191CA;
+  color: white;
+}
+.text2{
+  color: white;
+  position: absolute;
+  top: calc(50vh - 45px);
+  left: calc(50vw - 51.6px);
+}
+.text{
+  color: white;
+  position: absolute;
+  top: calc(50vh - 45px);
+  left: calc(50vw - 51.6px);
+}
+image{
+  border-radius: 50%;
+  width: 275rpx;
+  height: 275rpx;
+}

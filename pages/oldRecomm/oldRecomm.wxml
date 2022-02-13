@@ -1,0 +1,6 @@
+<!--pages/oldRecomm/oldRecomm.wxml-->
+<import src="/pages/template/recom.wxml" />
+<view class="bg"></view>
+  <view class="container" wx:for="{{oldRecom}}">
+      <template is="recom" data="{{...item,index}}" />
+  </view>

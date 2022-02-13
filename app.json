@@ -1,0 +1,55 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/modify/modify",
+    "pages/site/site",
+    "pages/index/index",
+    "pages/all/all",
+    "pages/detail/detail",
+    "pages/time/time",
+    "pages/newRecomm/newRecomm",
+    "pages/oldRecomm/oldRecomm",
+    "pages/search/search",
+    "pages/column/column",
+    "pages/detail2/detail2",
+    "pages/pv/pv",
+    "pages/person/person"
+  ],
+  "tabBar": {
+    "selectedColor": "#FFC64B",
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "/imgs/首页.png",
+      "selectedIconPath": "/imgs/首页-选中.png"
+      },
+      {
+        "pagePath": "pages/column/column",
+        "text": "专栏",
+        "iconPath": "/imgs/画册设计 (1).png",
+        "selectedIconPath": "/imgs/画册设计.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "个人",
+        "iconPath": "/imgs/我的.png",
+        "selectedIconPath": "/imgs/我的-选中.png"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+      "scope.userLocation": {
+          "desc": "你的位置信息将用于小程序位置接口的效果展示"
+      }
+  } 
+}
+

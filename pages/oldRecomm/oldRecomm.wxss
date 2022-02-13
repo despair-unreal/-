@@ -1,0 +1,2 @@
+/* pages/oldRecomm/oldRecomm.wxss */
+@import '/pages/template/recom.wxss';

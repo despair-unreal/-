@@ -1,0 +1,37 @@
+<!--pages/detail2/detail2.wxml-->
+<view class="coverImg" >
+  <image mode="widthFix" bindload="Imgload" src="{{content.coverImg}}"></image>
+</view>
+<text class="title">{{content.title}}</text>
+<view class="msg">
+  <view>
+    <image src="{{content.userImg}}"></image>
+    <view>
+      <text>{{content.userName}}</text>
+      <text>{{content.date}}</text>
+    </view>
+  </view>
+  <text>{{content.read}}阅读</text>
+</view> 
+<text class="content">{{content.content}}</text>
+<text class="pv" catchtap="toPv" wx:if="{{content.pv!=null}}">点击这里查看pv</text>
+
+
+<view class="bottom">
+  <view>
+    <image class="{{isMusicPlay?'music':''}}" src="/imgs/音乐.png" catchtap="musicPlay" animation="{{animationData}}"></image>
+    <text>{{content.musicTitle}}</text>
+  </view>
+  <view>
+    <image src="/imgs/评论.png"></image>
+    <text>{{content.comment}}</text>
+  </view>
+  <view catchtap="collect">
+    <image src="{{isCollect?'/imgs/收藏2.png':'/imgs/收藏_.png'}}"></image>
+    <text>{{content.collect}}</text>
+  </view>
+  <view catchtap="like">
+    <image src="{{isLike?'/imgs/邀请3.png':'/imgs/邀请2.png'}}"></image>
+    <text>{{content.like}}</text>
+  </view>
+</view>
