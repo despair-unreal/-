@@ -2,6 +2,7 @@ var express = require('express')
 var serveIndex = require('serve-index')
 var serveStatic = require('serve-static')
 var multiparty = require('multiparty')
+const finalhandler = require('finalhandler')
 var util = require('util')
 
 var LOCAL_BIND_PORT = 3000
@@ -28,7 +29,7 @@ var serve = serveStatic('./htdocs')
 app.use('/', serveIndex('./htdocs', {'icons': true}))
 
 app.get('/*', function(req, res) {
-    serve(req, res)
+    serve(req, res, finalhandler(req, res))
 });
 
 console.log(`Start static file server at ::${LOCAL_BIND_PORT}, Press ^ + C to exit`)
